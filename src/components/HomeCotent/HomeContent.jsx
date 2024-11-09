@@ -3,7 +3,7 @@ import Loading from '../Loading/Loading';
 
 const HomeContent = () => {
     return (
-        <div className={styles.HomeContent}>
+        <div className={styles.homeContent}>
             {/* CARD DE LISTA DE JOGOS */}
             <div className={styles.listGamesCard}>
                 <div className={styles.title}>

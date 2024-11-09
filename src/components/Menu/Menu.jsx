@@ -22,11 +22,11 @@ const Menu = () => {
             </li>
           </ul>
         </div>
-        <div className="menuBtn" id="menuBtn">
+        {/* <div className="menuBtn" id="menuBtn">
           <i id={styles.menuIcon}>
-            {/*Aqui será incluído um icone do React Icons*/}
+            Aqui será incluído um icone do React Icons
           </i>
-        </div>
+        </div> */}
       </nav>
     </>
   );
