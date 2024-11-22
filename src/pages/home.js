@@ -2,7 +2,7 @@ import Head from "next/head";
 import Container from "@/components/Container/index";
 import Menu from "@/components/Menu/Menu";
 import Footer from "@/components/Footer/Footer";
-import HomeContent from "@/components/HomeCotent/HomeContent";
+import HomeContent from "@/components/HomeContent";
 
 export default function Homepage() {
     return (
