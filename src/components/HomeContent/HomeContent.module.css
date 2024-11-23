@@ -69,11 +69,11 @@
   color: var(--secondary-color);
   height: 1.6rem;
   width: 3rem;
-  border: none;
   cursor: pointer;
   border-radius: 0.2rem;
   margin-right: 0.5rem;
   margin-top: 0.3rem;
+  border-color: #f22323;
 }
 
 .homeContent .listGamesCard .games .btnEdit {
@@ -83,10 +83,10 @@
   color: var(--secondary-color);
   height: 1.6rem;
   width: 3rem;
-  border: none;
   cursor: pointer;
   border-radius: 0.2rem;
   margin-top: 0.3rem;
+  border-color: var(--primary-color);
 }
 
 .homeContent .listGamesCard .games .btnDel:hover {

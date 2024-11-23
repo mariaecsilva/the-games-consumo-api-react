@@ -13,11 +13,16 @@ const EditGame = ({ id }) => {
     price: "",
   });
 
+
+
   useEffect(() => {
-    const fetchGame = async () => {
-      if (id) {
+    console.log("ID do jogo na URL:", id); // Verifique se o ID está vindo corretamente da URL
+    if (id) {
+      const fetchGame = async () => {
         try {
           const response = await axios.get(`http://localhost:4000/game/${id}`);
+          console.log("Resposta da API:", response);
+          console.log("Dados do jogo:", response.data.game);
           const selectedGame = response.data.game;
           setGame(selectedGame);
           setFormValues({
@@ -28,12 +33,16 @@ const EditGame = ({ id }) => {
             price: selectedGame.price,
           });
         } catch (error) {
-          console.error(error);
+          console.error("Erro na requisição:", error.response || error);
+          alert("Erro ao carregar os dados do jogo.");
+        } finally {
+          setLoading(false);
         }
-      }
-    };
-    fetchGame();
+      };
+      fetchGame();
+    }
   }, [id]);
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -61,7 +70,7 @@ const EditGame = ({ id }) => {
       );
       if (response.status === 200) {
         alert("Jogo atualizado!");
-        router.push("/");
+        router.push("/home");
       }
     } catch (error) {
       console.error(error);
@@ -70,7 +79,8 @@ const EditGame = ({ id }) => {
 
   if (!game) {
     return <div>Carregando dados do jogo...</div>;
-  }
+  };
+
 
   return (
     <>

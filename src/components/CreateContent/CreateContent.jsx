@@ -24,7 +24,7 @@ const CreateContent = () => {
       try {
         const response = await axios.post("http://localhost:4000/game", game);
         if (response.status === 201) {
-          router.push("/")
+          router.push("/home")
         }
       } catch (error) {
         console.log(error);

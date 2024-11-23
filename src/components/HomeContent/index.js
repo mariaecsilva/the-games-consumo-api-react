@@ -24,25 +24,39 @@ const HomeContent = () => {
     fetchGames();
   }, []);
 
+  const deleteGame = async (gameId) => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:4000/game/${gameId}`
+      );
+      if (response.status === 204) {
+        alert("Jogo deletado com sucesso!");
+        setGames(games.filter((game) => game._id !== gameId));
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   const handleEdit = (game) => {
+    console.log("ID do jogo que será editado:", game._id); 
     router.push({
       pathname: "/edit",
       query: { id: game._id },
     });
   };
 
+  
 
   return (
     <>
       <div className={styles.homeContent}>
-        {/* CARD LISTA DE JOGOS */}
         <div className={styles.listGamesCard}>
-          {/* TITLE */}
           <div className={styles.title}>
             <h2>Lista de jogos</h2>
           </div>
           <Loading loading={loading} />
-          <div className={styles.games} id={styles.games}>
+          <div className={styles.games}>
             {games.map((game) => (
               <ul className={styles.listGames} key={game._id}>
                 <div className={styles.gameImg}>
@@ -53,8 +67,8 @@ const HomeContent = () => {
                   <li>{game.platform}</li>
                   <li>{game.year}</li>
                   <li>{game.price}</li>
-
-                  {/* Inserir aqui o botão de deletar */}
+                  <button className={styles.btnDel}>Deletar</button>
+                  <button className={styles.btnEdit} onClick={() => handleEdit(game)}>Editar</button>
                 </div>
               </ul>
             ))}
