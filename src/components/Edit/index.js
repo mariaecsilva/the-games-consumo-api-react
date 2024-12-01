@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
 import styles from "@/components/Edit/edit.module.css";
-import Loading from "../Loading/Loading";
+import Loading from "../Loading";
 
 const EditGame = () => {
   const router = useRouter();

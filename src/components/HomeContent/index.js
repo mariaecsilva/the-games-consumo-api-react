@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import styles from "@/components/HomeContent/HomeContent.module.css";
-import Loading from "../Loading/Loading";
+import Loading from "../Loading";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import axios from "axios";
-import capa from "../../../public/images/game_cd_cover.png"
+import capa from "../../../public/images/game_cd_cover.png";
 
 const HomeContent = () => {
   const [loading, setLoading] = useState(true);
