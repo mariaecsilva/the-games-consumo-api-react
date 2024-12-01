@@ -69,7 +69,7 @@ const HomeContent = () => {
                   <h3>{game.title}</h3>
                   <li>{game.platform}</li>
                   <li>{game.year}</li>
-                  <li>{game.price}</li>
+                  <li>R${game.price}</li>
                   <button
                     className={styles.btnDel}
                     onClick={() => deleteGame(game._id)}

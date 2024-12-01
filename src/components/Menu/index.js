@@ -1,4 +1,5 @@
 import styles from "@/components/Menu/Menu.module.css";
+import Image from "next/image";
 
 const Menu = () => {
   return (

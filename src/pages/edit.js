@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Container from "@/components/Container/index";
 import Menu from "@/components/Menu";
-import Footer from "@/components/Footer/Footer";
+import Footer from "@/components/Footer";
 import EditGame from "@/components/Edit/index";
 
 export default function Homepage() {
