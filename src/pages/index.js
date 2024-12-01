@@ -3,6 +3,7 @@ import Container from "@/components/Container/index";
 import LoginContent from "@/components/LoginContent/index";
 import Footer from "@/components/Footer/Footer";
 
+
 export default function Home() {
     return (
         <>
