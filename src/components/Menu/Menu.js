@@ -18,7 +18,7 @@ const Menu = () => {
               <a href="/create">Cadastrar jogos</a>
             </li>
             <li>
-              <a href="#">Logout</a>
+              <a href="/">Logout</a>
             </li>
           </ul>
         </div>

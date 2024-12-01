@@ -4,6 +4,7 @@ import Loading from "../Loading/Loading";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import axios from "axios";
+import capa from "../../../public/images/game_cd_cover.png"
 
 const HomeContent = () => {
   const [loading, setLoading] = useState(true);
@@ -58,14 +59,14 @@ const HomeContent = () => {
               <ul className={styles.listGames} key={game._id}>
                 <div className={styles.gameImg}>
                   <Image
-                    src="/public/images/game_cd_cover.png"
+                    src={capa}
                     alt="Jogo em estoque"
                     width={100}
                     height={100}
                   />
                 </div>
                 <div className={styles.gameInfo}>
-                  <h3>Titulo: {game.title}</h3>
+                  <h3>{game.title}</h3>
                   <li>{game.platform}</li>
                   <li>{game.year}</li>
                   <li>{game.price}</li>
